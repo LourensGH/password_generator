@@ -15,7 +15,14 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/password_generator](https://hexdocs.pm/password_generator).
+# Test With
+iex -S mix
 
+PasswordManager.start()
+
+{:ok, "example.com", "user1", password} = PasswordManager.add_login("example.com", "user1")
+IO.puts("Generated password: #{password}")
+
+IO.inspect(PasswordManager.get_login("example.com"))
+
+IO.inspect(PasswordManager.list_logins())
