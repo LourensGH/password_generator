@@ -1,6 +1,5 @@
 # PasswordGenerator
-
-**TODO: Add description**
+Simple in memory login storage functionality with password generator.
 
 ## Installation
 
